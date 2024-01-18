@@ -2,8 +2,7 @@ Package: socialcap
 Title: Enhances ggplot2 Visualizations with Social Media Handles and Icons via ggtext
 Version: 0.0.0.9000
 Authors@R: 
-    person("Yujin", "Choi", , "topaize3460@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person("Yujin", "Choi", , "topaize3460@gmail.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Encoding: UTF-8

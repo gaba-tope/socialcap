@@ -20,8 +20,6 @@
 #' @param textfont Font family for username text in string. Font with this family name should have been loaded in advance.
 #' @param iconpath Path where 'Font Awesome Brands' font files are located, in string
 #' @returns A string of social media icon and username in HTML format.
-#' @examples
-#' socialcap(gitname = "gaba-tope", twitname = "tope_ezia")
 #'
 #' @export
 socialcap <- function(gitname = "", twitname = "", facebkname = "",
@@ -40,27 +38,27 @@ socialcap <- function(gitname = "", twitname = "", facebkname = "",
   # Github Info
   github_icon <- "&#xf09b" #unicode f09b, used for HTML so &#x added.
   github_username <- gitname
-  github_caption <- glue::glue("<span style='font-family:\"Font_Awesome_6_Brands_reg\";'>{github_icon};</span><span style='color: {textcol}; font-family:\"{textfont}\";'>{github_username}</span>")
+  github_caption <- glue::glue("<span style='color: {iconcol};font-family:\"Font_Awesome_6_Brands_reg\";'>{github_icon};</span> <span style='color: {textcol}; font-family:\"{textfont}\";'>{github_username}</span>")
 
   # Twitter Info
   twit_icon <- "&#xf099"
   twit_username <- twitname
-  twit_caption <- glue::glue("<span style='font-family:\"Font_Awesome_6_Brands_reg\";'>{twit_icon};</span><span style='color: {textcol}; font-family:\"{textfont}\";'>{twit_username}</span>")
+  twit_caption <- glue::glue("<span style='color: {iconcol};font-family:\"Font_Awesome_6_Brands_reg\";'>{twit_icon};</span> <span style='color: {textcol}; font-family:\"{textfont}\";'>{twit_username}</span>")
 
   # Facebook Info
   facebk_icon <- "&#xf09a"
   facebk_username <- facebkname
-  facebk_caption <- glue::glue("<span style='font-family:\"Font_Awesome_6_Brands_reg\";'>{facebk_icon};</span><span style='color: {textcol}; font-family:\"{textfont}\";'>{facebk_username}</span>")
+  facebk_caption <- glue::glue("<span style='color: {iconcol};font-family:\"Font_Awesome_6_Brands_reg\";'>{facebk_icon};</span> <span style='color: {textcol}; font-family:\"{textfont}\";'>{facebk_username}</span>")
 
   # LinkedIn Info
   linked_icon <- "&#xf08c"
   linked_username <- linkedname
-  linked_caption <- glue::glue("<span style='font-family:\"Font_Awesome_6_Brands_reg\";'>{linked_icon};</span><span style='color: {textcol}; font-family:\"{textfont}\";'>{linked_username}</span>")
+  linked_caption <- glue::glue("<span style='color: {iconcol};font-family:\"Font_Awesome_6_Brands_reg\";'>{linked_icon};</span> <span style='color: {textcol}; font-family:\"{textfont}\";'>{linked_username}</span>")
 
   # Discord Info
   discd_icon <- "&#xf392"
   discd_username <- discdname
-  discd_caption <- glue::glue("<span style='font-family:\"Font_Awesome_6_Brands_reg\";'>{discd_icon};</span><span style='color: {textcol}; font-family:\"{textfont}\";'>{discd_username}</span>")
+  discd_caption <- glue::glue("<span style='color: {iconcol};font-family:\"Font_Awesome_6_Brands_reg\";'>{discd_icon};</span> <span style='color: {textcol}; font-family:\"{textfont}\";'>{discd_username}</span>")
 
   # df for brand selection
   brand_df <- data.frame(Brand = c("github", "twit", "facebk", "linked", "discd"),
@@ -75,12 +73,7 @@ socialcap <- function(gitname = "", twitname = "", facebkname = "",
   print_df <- dplyr::filter(brand_df, .data$Include == 1)
   num_row <- nrow(print_df)
 
-  social_caption <- vector(length = 0L)
-  for (i in num_row){
-    brand_caption <- print_df[i, 3]
-    social_caption <- append(social_caption, brand_caption)
-
-  }
+  social_caption <- print_df[1:num_row, 3]
   social_caption_print <- paste(social_caption, collapse = " ")
 
   return(social_caption_print)

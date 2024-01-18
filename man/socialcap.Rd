@@ -52,7 +52,3 @@ the following conditions should be met:
 \item The theme element of the caption should be \code{plot.caption = element_textbox_simple()} or \code{plot.caption = element_textbox()}.
 }
 }
-\examples{
-socialcap(gitname = "gaba-tope", twitname = "tope_ezia")
-
-}
