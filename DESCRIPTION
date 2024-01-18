@@ -3,8 +3,7 @@ Title: Enhances ggplot2 Visualizations with Social Media Handles and Icons via g
 Version: 0.0.0.9000
 Authors@R: 
     person("Yujin", "Choi", , "topaize3460@gmail.com", role = c("aut", "cre"))
-Description: With socialcap, users can add their social media usernames (GitHub, Twitter, Facebook, LinkedIn, Discord) along with icons to their plots.
-The appearance of these handles, including text color and font can be customized to match the aesthetic of their visualizations.
+Description: With socialcap, users can add their social media usernames (GitHub, Twitter, Facebook, LinkedIn, Discord) along with icons to their plots. The appearance of these handles, including text color and font can be customized to match the aesthetic of their visualizations.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
