@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 # socialcap
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/gaba-tope/socialcap/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gaba-tope/socialcap/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The `socialcap` package is designed to provide an easy and efficient way to include social media handles with corresponding icons in the captions of ggplot2 plots. <br>

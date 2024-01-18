@@ -1,9 +1,12 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- Use `devtools::build_readme()` to generate .md from the .Rmd file. -->
 
 # socialcap
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/gaba-tope/socialcap/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gaba-tope/socialcap/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The `socialcap` package is designed to provide an easy and efficient way
