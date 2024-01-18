@@ -33,6 +33,15 @@ socialcap <- function(gitname = "", twitname = "", facebkname = "",
                      regular = iconpath),
            error = function(e) message("An error occurred while loading the font for icon:\n", e)
   )
+
+  # Message if the textfont is not loaded in the current session:
+  loaded_families <- sysfonts::font_families()
+  if (!(textfont %in% loaded_families)) {
+    message_text <- glue::glue("NOTE: text_font '{textfont}' familiy is not loaded. Make sure the font family is loaded
+          before calling ggplot().")
+    message(message_text)
+  }
+
   showtext::showtext_auto()
 
   # Github Info
@@ -76,5 +85,6 @@ socialcap <- function(gitname = "", twitname = "", facebkname = "",
   social_caption <- print_df[1:num_row, 3]
   social_caption_print <- paste(social_caption, collapse = " ")
 
+  cat("------- Caption Generated -------\n")
   return(social_caption_print)
 }
