@@ -8,11 +8,12 @@
 
 The `socialcap` package is designed to provide an easy and efficient way
 to include social media handles with corresponding icons in the captions
-of ggplot2 plots. <br> By using the socialcap function, users can: + Add
-their social media usernames (GitHub, Twitter, Facebook, LinkedIn,
-Discord) along with stylish icons directly to their plots. + Customize
-the appearance of these handles, including text color and font, to match
-the aesthetic of their visualizations.
+of ggplot2 plots. <br> By using the socialcap function, users can:
+
+1.  Add their social media usernames (GitHub, Twitter, Facebook,
+    LinkedIn, Discord) along with stylish icons directly to their plots.
+2.  Customize the appearance of these handles, including text color and
+    font, to match the aesthetic of their visualizations.
 
 This package was largely inspired from [Nicola
 Rennie](https://nrennie.rbind.io/)’s post, [Adding social media icons to
@@ -38,7 +39,7 @@ After installation, you may load `socialcap` into R session with:
 library(socialcap)
 ```
 
-You are now ready to use socialcap to enhance your ggplot2
+You are now ready to use `socialcap` to enhance your ggplot2
 visualizations with social media information.
 
 ## Requirement
@@ -48,7 +49,7 @@ visualizations with social media information.
     [website](https://fontawesome.com/download). ‘Font Awesome Free’
     font files follow the [SIL OFL
     license](https://openfontlicense.org/) as explained in their
-    [website](https://fontawesome.com/license/free) ( accessed in
+    [website](https://fontawesome.com/license/free) (accessed in
     2024-01-18).
 2.  The returned string should be written in HTML language. In order to
     apply the string into your plots, the following conditions should be
@@ -69,8 +70,8 @@ These are basic examples which show you how to use the function
 ``` r
 library(socialcap)
 library(showtext)
-#> 필요한 패키지를 로딩중입니다: sysfonts
-#> 필요한 패키지를 로딩중입니다: showtextdb
+#> Loading required package: sysfonts
+#> Loading required package: showtextdb
 library(ggplot2)
 library(ggtext)
 library(showtext)
@@ -78,7 +79,7 @@ library(showtext)
 ## basic example code
 social_caption <- socialcap::socialcap(gitname = "gaba-tope", twitname = "@tope_ezia")
 social_caption
-#> [1] "<span style='font-family:\"Font_Awesome_6_Brands_reg\";'>&#xf099;</span><span style='color: grey10; font-family:\"oswald\";'>@tope_ezia</span>"
+#> [1] "<span style='color: #E30b5c;font-family:\"Font_Awesome_6_Brands_reg\";'>&#xf09b;</span> <span style='color: grey10; font-family:\"oswald\";'>gaba-tope</span> <span style='color: #E30b5c;font-family:\"Font_Awesome_6_Brands_reg\";'>&#xf099;</span> <span style='color: grey10; font-family:\"oswald\";'>@tope_ezia</span>"
 
 data_caption <- "Data : My Own Data"
 plot_caption <- paste(data_caption, "<br> Graphic:", social_caption)
