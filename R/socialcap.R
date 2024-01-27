@@ -18,7 +18,6 @@
 #' @param iconcol Color code for social media icon in string
 #' @param textcol Color code for username text in string
 #' @param textfont Font family for username text in string. Font with this family name should have been loaded in advance.
-#' @param iconpath Path where 'Font Awesome Brands' font files are located, in string
 #' @returns A string of social media icon and username in HTML format.
 #'
 #' @export
@@ -26,11 +25,11 @@ socialcap <- function(gitname = "", twitname = "", facebkname = "",
                       linkedname = "", discdname = "",
                       iconcol = "#E30b5c",
                       textcol = "grey10",
-                      textfont = "oswald",
-                      iconpath = "./Font-Awesome-6-Brands-Regular-400.otf"
+                      textfont = "oswald"
                       ){
+  font_path <- system.file("fonts/Font-Awesome-6-Brands-Regular-400.otf", package = "socialcap")
   tryCatch(sysfonts::font_add(family = "Font_Awesome_6_Brands_reg", # Social media icon fonts
-                     regular = iconpath),
+                       regular = font_path),
            error = function(e) message("An error occurred while loading the font for icon:\n", e)
   )
 

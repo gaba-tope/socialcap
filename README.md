@@ -23,6 +23,12 @@ Rennie](https://nrennie.rbind.io/)’s post, [Adding social media icons to
 charts with
 {ggplot2}](https://nrennie.rbind.io/blog/adding-social-media-icons-ggplot2/).
 
+The icons of social media is obtained from the ‘Font Awesome 6 Free’
+font, which is included in this package. ‘Font Awesome 6 Free’ font
+files follow the [SIL OFL license](https://openfontlicense.org/) as
+explained in their [website](https://fontawesome.com/license/free)
+(accessed in 2024-01-18).
+
 ## Installation
 
 ### Installation from GitHub
@@ -47,23 +53,13 @@ visualizations with social media information.
 
 ## Requirement
 
-1.  You need to have ‘Font Awesome Free’ font to make icons appear. You
-    may download the font from their
-    [website](https://fontawesome.com/download). ‘Font Awesome Free’
-    font files follow the [SIL OFL
-    license](https://openfontlicense.org/) as explained in their
-    [website](https://fontawesome.com/license/free) (accessed in
-    2024-01-18).
-2.  The returned string should be written in HTML language. In order to
-    apply the string into your plots, the following conditions should be
-    met:
-
-- Package {ggtext} should be loaded.
-- Package {ggplot2} should be loaded, and your plot should be made with
-  `ggplot()`.
-- The theme element of the caption should use ggtext elements
-  (i.e. `plot.caption = element_textbox_simple()` or
-  `plot.caption = element_textbox()`).
+The returned string should be written in HTML language. In order to
+apply the string into your plots, the following conditions should be
+met: + Package {ggtext} should be loaded. + Package {ggplot2} should be
+loaded, and your plot should be made with `ggplot()`. + The theme
+element of the caption should use ggtext elements
+(i.e. `plot.caption = element_textbox_simple()` or
+`plot.caption = element_textbox()`).
 
 ## Example
 
@@ -73,27 +69,31 @@ These are basic examples which show you how to use the function
 ``` r
 library(socialcap)
 library(showtext)
-#> Loading required package: sysfonts
-#> Loading required package: showtextdb
+#> 필요한 패키지를 로딩중입니다: sysfonts
+#> 필요한 패키지를 로딩중입니다: showtextdb
 library(ggplot2)
 library(ggtext)
-library(showtext)
 
 ## basic example code
+# Call socialcap function:
 social_caption <- socialcap::socialcap(gitname = "gaba-tope", twitname = "@tope_ezia")
+#> An error occurred while loading the font for icon:
+#> Error in check_font_path(regular, "regular"): font file not found for 'regular' type
+#> NOTE: text_font 'oswald' familiy is not loaded. Make sure the font family is loaded
+#> before calling ggplot().
+#> ------- Caption Generated -------
 social_caption
 #> [1] "<span style='color: #E30b5c;font-family:\"Font_Awesome_6_Brands_reg\";'>&#xf09b;</span> <span style='color: grey10; font-family:\"oswald\";'>gaba-tope</span> <span style='color: #E30b5c;font-family:\"Font_Awesome_6_Brands_reg\";'>&#xf099;</span> <span style='color: grey10; font-family:\"oswald\";'>@tope_ezia</span>"
 
+# Caption for the Plot
 data_caption <- "Data : My Own Data"
 plot_caption <- paste(data_caption, "<br> Graphic:", social_caption)
-## Apply to Plot
-df <- data.frame(x = c(1, 2, 3),
-                 y = c(4, 5, 6))
 
+# Apply to Plot
 font_add_google(name = "Oswald", family = "oswald")
 showtext_auto()
 
-plot_ex <- ggplot(data = df, aes(x = x, y = y)) +
+plot <- ggplot(iris, aes(x = Species, y = Sepal.Length)) +
   geom_point() +
   labs(caption = plot_caption) +
   theme(plot.caption = element_textbox(size = 15,
@@ -101,7 +101,79 @@ plot_ex <- ggplot(data = df, aes(x = x, y = y)) +
                                        hjust = 0)
         )
 
-plot_ex
+plot
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'Font_Awesome_6_Brands_reg' not found, will use 'wqy-microhei' instead
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'Font_Awesome_6_Brands_reg' not found, will use 'wqy-microhei' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'Font_Awesome_6_Brands_reg' not found, will use 'wqy-microhei' instead
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'Font_Awesome_6_Brands_reg' not found, will use 'wqy-microhei' instead
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'Font_Awesome_6_Brands_reg' not found, will use 'wqy-microhei'
+#> instead
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'Font_Awesome_6_Brands_reg' not found, will use 'wqy-microhei'
+#> instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'Font_Awesome_6_Brands_reg' not found, will use 'wqy-microhei'
+#> instead
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'Font_Awesome_6_Brands_reg' not found, will use 'wqy-microhei'
+#> instead
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
