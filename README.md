@@ -23,7 +23,7 @@ Rennie](https://nrennie.rbind.io/)’s post, [Adding social media icons to
 charts with
 {ggplot2}](https://nrennie.rbind.io/blog/adding-social-media-icons-ggplot2/).
 
-The icons of social media is obtained from the ‘Font Awesome 6 Free’
+The icons of social media are obtained from the ‘Font Awesome 6 Free’
 font, which is included in this package. ‘Font Awesome 6 Free’ font
 files follow the [SIL OFL license](https://openfontlicense.org/) as
 explained in their [website](https://fontawesome.com/license/free)
