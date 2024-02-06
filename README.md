@@ -69,16 +69,14 @@ These are basic examples which show you how to use the function
 ``` r
 library(socialcap)
 library(showtext)
-#> 필요한 패키지를 로딩중입니다: sysfonts
-#> 필요한 패키지를 로딩중입니다: showtextdb
+#> Loading required package: sysfonts
+#> Loading required package: showtextdb
 library(ggplot2)
 library(ggtext)
 
 ## basic example code
 # Call socialcap function:
 social_caption <- socialcap::socialcap(gitname = "gaba-tope", twitname = "@tope_ezia")
-#> An error occurred while loading the font for icon:
-#> Error in check_font_path(regular, "regular"): font file not found for 'regular' type
 #> NOTE: text_font 'oswald' familiy is not loaded. Make sure the font family is loaded
 #> before calling ggplot().
 #> ------- Caption Generated -------
@@ -102,78 +100,6 @@ plot <- ggplot(iris, aes(x = Species, y = Sepal.Length)) +
         )
 
 plot
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
-#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-
-#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
-#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-
-#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
-#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-
-#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
-#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-
-#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
-#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-
-#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
-#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-
-#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
-#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-
-#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
-#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-
-#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
-#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-
-#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
-#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-
-#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
-#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-
-#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
-#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-
-#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
-#> 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family 'Font_Awesome_6_Brands_reg' not found, will use 'wqy-microhei' instead
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family 'Font_Awesome_6_Brands_reg' not found, will use 'wqy-microhei' instead
-
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family 'Font_Awesome_6_Brands_reg' not found, will use 'wqy-microhei' instead
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family 'Font_Awesome_6_Brands_reg' not found, will use 'wqy-microhei' instead
-#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-#> font family 'Font_Awesome_6_Brands_reg' not found, will use 'wqy-microhei'
-#> instead
-#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-#> font family 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-#> font family 'Font_Awesome_6_Brands_reg' not found, will use 'wqy-microhei'
-#> instead
-
-#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-#> font family 'Font_Awesome_6_Brands_reg' not found, will use 'wqy-microhei'
-#> instead
-#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-#> font family 'Font_Awesome_6_Brands_reg' not found, will use 'sans' instead
-#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-#> font family 'Font_Awesome_6_Brands_reg' not found, will use 'wqy-microhei'
-#> instead
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
