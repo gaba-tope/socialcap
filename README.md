@@ -55,11 +55,14 @@ visualizations with social media information.
 
 The returned string should be written in HTML language. In order to
 apply the string into your plots, the following conditions should be
-met: + Package {ggtext} should be loaded. + Package {ggplot2} should be
-loaded, and your plot should be made with `ggplot()`. + The theme
-element of the caption should use ggtext elements
-(i.e. `plot.caption = element_textbox_simple()` or
-`plot.caption = element_textbox()`).
+met:
+
+- Package {ggtext} should be loaded.
+- Package {ggplot2} should be loaded, and your plot should be made with
+  `ggplot()`.
+- The theme element of the caption should use ggtext elements
+  (i.e. `plot.caption = element_textbox_simple()` or
+  `plot.caption = element_textbox()`).
 
 ## Example
 
