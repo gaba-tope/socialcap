@@ -12,8 +12,7 @@ socialcap(
   discdname = "",
   iconcol = "#E30b5c",
   textcol = "grey10",
-  textfont = "oswald",
-  iconpath = "./Font-Awesome-6-Brands-Regular-400.otf"
+  textfont = "oswald"
 )
 }
 \arguments{
@@ -32,8 +31,6 @@ socialcap(
 \item{textcol}{Color code for username text in string}
 
 \item{textfont}{Font family for username text in string. Font with this family name should have been loaded in advance.}
-
-\item{iconpath}{Path where 'Font Awesome Brands' font files are located, in string}
 }
 \value{
 A string of social media icon and username in HTML format.
